@@ -1,1 +1,0 @@
-web:gunicorn did_django_nasa_api-main.wsgi --log-file -
