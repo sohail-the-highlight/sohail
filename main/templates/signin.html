@@ -1,0 +1,45 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/house.css' %}">
+    <style>
+      .myform{
+      background: grey;
+      padding: 50;
+      width: 30%;
+      position: absolute;
+      right: 40%;
+      border-radius: 0px 120px 0px 120px;
+      }
+      .c1{
+        background: grey;
+        padding: 7;
+        width: 100%;
+        color: white;
+        font-size: 20;
+        border: none;
+        outline: none;
+        box-shadow: 0 1px white;
+        border: 120px;
+        text-indent: 10;
+      }
+
+      ::placeholder{
+        color: white;
+      }
+
+    </style>
+</head>
+
+<body style="background-color:black">
+  
+<form method="post"   class="mt-5 myform " >
+  {% csrf_token %}
+{{fm.as_p}}
+
+
+<button type="submit" class="btn btn-success my-btn">submit</button>
+</form>
+
+{% include 'message.html' %}
+</body>
